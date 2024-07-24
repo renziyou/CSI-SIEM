@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.19
 
 # Copyright (c) 2020 Battelle Energy Alliance, LLC.  All rights reserved.
 LABEL maintainer="malcolm.netsec@gmail.com"
