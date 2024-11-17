@@ -10,7 +10,7 @@
 # build a patched APK of stunnel supporting ldap StartTLS (patched protocols.c)
 # (based on https://www.stunnel.org/pipermail/stunnel-users/2013-November/004437.html)
 
-FROM alpine:3.11 as stunnel_build
+FROM alpine:3.20.3 as stunnel_build
 
 ADD https://codeload.github.com/alpinelinux/aports/tar.gz/master /aports-master.tar.gz
 ADD nginx/src/*.patch /usr/src/patches/
@@ -39,7 +39,7 @@ RUN set -x ; \
 
 ####################################################################################
 
-FROM alpine:3.11
+FROM alpine:3.20.3
 
 LABEL maintainer="malcolm.netsec@gmail.com"
 LABEL org.opencontainers.image.authors='malcolm.netsec@gmail.com'
